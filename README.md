@@ -1,6 +1,6 @@
 # QA Automation
 
-This repository contains QA automation for the AppSierra. It uses Selenium, via a local Chrome Driver or 
+Author Sarthak Choudhary for QA automation. It uses Selenium, via a local Chrome Driver or 
 a Remote Driver that connects to a Selenium Grid.
 
 ## Running Java and Maven on host
@@ -17,7 +17,7 @@ Mac, ensure the Driver is executable.
 Specify the Chrome Driver when running the test.
 
 ```shell script
-mvn test -DconfigPath=./env/prod.properties -Dwebdriver.chrome.driver=/path/to/chromedriver -DGroups=GroupName
+mvn clean test -Dtestxml=xmlName -DBrowser=browserName
 ```
 - To Run on a specific environment. Add a property file under `env` folder. Command to run specific env: `-DconfigPath=./env/{environment_name}.properties`
 - Can group test cases using tag `@Tag(tag-name)`. Command to run a specific group of test cases: `-DGroups=GroupName`
